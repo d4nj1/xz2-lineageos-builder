@@ -19,10 +19,6 @@ if [ ! -d ~/android/rom/lineageOS/10 ]; then
 	mkdir -p ~/android/rom/lineageOS/10
 	cd ~/android/rom/lineageOS/10
 	repo init -u git://github.com/LineageOS/android.git -b $lineageBranch
-	repo sync
-else
-	cd ~/android/rom/lineageOS/10
-	repo sync
 fi
 
 # Fetch patched manifest
