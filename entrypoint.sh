@@ -33,12 +33,12 @@ fi
 # Fetch build scripts
 
 git clone https://github.com/MartinX3-AndroidDevelopment/SCRIPTS_BUILD.git -b $scriptsBranch ~/SCRIPTS_BUILD
-chmod +x ~/SCRIPTS_BUILD/ROM/CUSTOM/XPERIA_TAMA/LineageOS/build.sh
-cd ~/SCRIPTS_BUILD/ROM/CUSTOM/XPERIA_TAMA/LineageOS/
+chmod +x ~/SCRIPTS_BUILD/ROM/SODP/XPERIA_TAMA/LineageOS/build.sh
+cd ~/SCRIPTS_BUILD/ROM/SODP/XPERIA_TAMA/LineageOS/
 
 # Remove interactive input
 
-sed -i 's|read -n1 -r -p "Press space to continue..."||g' ~/SCRIPTS_BUILD/ROM/CUSTOM/XPERIA_TAMA/LineageOS/build.sh
+sed -i 's|read -n1 -r -p "Press space to continue..."||g' ~/SCRIPTS_BUILD/ROM/SODP/XPERIA_TAMA/LineageOS/build.sh
 
 # Run build
 
