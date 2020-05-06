@@ -10,6 +10,7 @@ RUN apt-get purge openjdk-* icedtea-* icedtea6-*
 RUN apt-get install -y \
 	openjdk-8-jdk \
 	bison \
+	ccache \
 	g++-multilib \
 	git \
 	git-lfs \
