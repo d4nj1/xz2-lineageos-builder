@@ -32,7 +32,10 @@ fi
 
 # Fetch build scripts
 
-git clone https://github.com/MartinX3-AndroidDevelopment/SCRIPTS_BUILD.git -b $scriptsBranch ~/SCRIPTS_BUILD
+if [ ! -d ~/SCRIPTS_BUILD ]; then
+  git clone https://github.com/MartinX3-AndroidDevelopment/SCRIPTS_BUILD.git -b $scriptsBranch ~/SCRIPTS_BUILD
+fi
+
 chmod +x ~/SCRIPTS_BUILD/ROM/SODP/XPERIA_TAMA/LineageOS/build.sh
 cd ~/SCRIPTS_BUILD/ROM/SODP/XPERIA_TAMA/LineageOS/
 
