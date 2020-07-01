@@ -26,7 +26,8 @@ RUN apt-get install -y \
 	flex \
 	curl \
 	python \
-	python3
+	python3 \
+	rsync
 
 RUN curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > /bin/repo
 RUN chmod a+x /bin/repo
