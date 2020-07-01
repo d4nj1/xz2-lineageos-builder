@@ -25,15 +25,16 @@ fi
 
 if [ ! -d ~/android/rom/lineageOS/10/.repo/local_manifests ]; then
 	git clone https://github.com/MartinX3-AndroidDevelopment-LineageOS/local_manifests.git -b MartinX3/$lineageBranch ~/android/rom/lineageOS/10/.repo/local_manifests
-else
-	cd ~/android/rom/lineageOS/10/.repo/local_manifests
-	git pull
 fi
 
 # Fetch build scripts
 
 if [ ! -d ~/SCRIPTS_BUILD ]; then
   git clone https://github.com/MartinX3-AndroidDevelopment/SCRIPTS_BUILD.git -b $scriptsBranch ~/SCRIPTS_BUILD
+else
+	cd ~/SCRIPTS_BUILD
+	git reset --hard
+	git pull
 fi
 
 chmod +x ~/SCRIPTS_BUILD/ROM/SODP/XPERIA_TAMA/LineageOS/build.sh
