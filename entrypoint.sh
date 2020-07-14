@@ -49,7 +49,7 @@ sed -i 's|read -n1 -r -p "Press space to continue..."||g' ~/SCRIPTS_BUILD/ROM/SO
 
 # Set build cache folder to customROM out dir
 
-sed -i 's|/media/martin/extLinux/developer/android/cache/lineageOS/10|/home/developer/android/rom/lineageOS/10/out|g' ~/SCRIPTS_BUILD/ROM/SODP/XPERIA_TAMA/LineageOS/build.sh
+sed -i 's|build_cache=/media/martin/extLinux/developer/android/cache/lineageOS/10|build_cache=/home/developer/android/rom/lineageOS/10/out|g' ~/SCRIPTS_BUILD/ROM/SODP/XPERIA_TAMA/LineageOS/build.sh
 
 # Run build
 
