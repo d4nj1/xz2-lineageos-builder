@@ -11,7 +11,7 @@ It uses a build script provided by MartinX3 which can be found in this [reposito
 
 `docker run -ti -v $PWD/android:/home/developer/android -v $PWD/out:/home/developer/out xz2-lineageos-builder:latest`
 
-This will pass the **android**, **cache** and **out** folder to the container which will reuse already downloaded repository and branch data and make the build result available to the host.
+This will pass the **android** and **out** folder to the container which will reuse already downloaded repository and branch data and make the build result available to the host.
 
 Optional you can pass branch name for LineageOS and scripts repositories like this:
 
