@@ -19,6 +19,8 @@ if [ ! -d ~/android/rom/lineageOS/10 ]; then
 	mkdir -p ~/android/rom/lineageOS/10
 	cd ~/android/rom/lineageOS/10
 	repo init -u git://github.com/LineageOS/android.git -b $lineageBranch
+else
+  repo forall -vc "git reset --hard"
 fi
 
 # Fetch patched manifest
@@ -43,6 +45,10 @@ cd ~/SCRIPTS_BUILD/ROM/SODP/XPERIA_TAMA/LineageOS/
 # Remove interactive input
 
 sed -i 's|read -n1 -r -p "Press space to continue..."||g' ~/SCRIPTS_BUILD/ROM/SODP/XPERIA_TAMA/LineageOS/build.sh
+
+# Set build cache folder to customROM out dir
+
+sed -i 's|/media/martin/extLinux/developer/android/out/lineageOS/10|/home/developer/android/rom/lineageOS/10/out|g' ~/SCRIPTS_BUILD/ROM/SODP/XPERIA_TAMA/LineageOS/build.sh
 
 # Run build
 
