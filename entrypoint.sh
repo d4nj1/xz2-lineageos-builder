@@ -20,6 +20,7 @@ if [ ! -d ~/android/rom/lineageOS/10 ]; then
 	cd ~/android/rom/lineageOS/10
 	repo init -u git://github.com/LineageOS/android.git -b $lineageBranch
 else
+  cd ~/android/rom/lineageOS/10
   repo forall -vc "git reset --hard"
 fi
 
